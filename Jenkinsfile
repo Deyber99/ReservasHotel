@@ -1,5 +1,6 @@
 def runCmd(String args) {
     if (isUnix()) {
+        sh "chmod +x mvnw"
         sh "./mvnw ${args}"
     } else {
         bat "mvnw.cmd ${args}"
